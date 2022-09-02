@@ -31,13 +31,11 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'School Timings', icon: FiTrendingUp },
-  { name: 'Track Bus', icon: FiStar },
-  { name: 'Holidays', icon: FiSettings },
-  { name: 'Courses', icon: FiCompass },
-  { name: 'Contact', icon: FiCompass },
-  { name: 'Kid Progress', icon: FiTrendingUp },
-  { name: 'Evaluations', icon: FiTrendingUp },
+  { name: 'Checkups', icon: FiTrendingUp },
+  { name: 'Nearest-Hospital', icon: FiStar },
+  { name: 'Reports', icon: FiSettings },
+  { name: 'COVID-19', icon: FiCompass },
+  { name: 'Emergency', icon: FiCompass },
 ];
 
 export default function Healthsidebar({ children }: { children: ReactNode }) {

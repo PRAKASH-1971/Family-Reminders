@@ -31,13 +31,13 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'School Timings', icon: FiTrendingUp },
-  { name: 'Track Bus', icon: FiStar },
-  { name: 'Holidays', icon: FiSettings },
-  { name: 'Courses', icon: FiCompass },
-  { name: 'Contact', icon: FiCompass },
-  { name: 'Kid Progress', icon: FiTrendingUp },
-  { name: 'Evaluations', icon: FiTrendingUp },
+  { name: 'Status', icon: FiTrendingUp },
+  { name: 'Documents', icon: FiStar },
+  { name: 'Service', icon: FiSettings },
+  { name: 'Car-wash', icon: FiCompass },
+  { name: 'Accessories', icon: FiCompass },
+  { name: 'Show-room', icon: FiCompass },
+  { name: 'Tax', icon: FiCompass },
 ];
 
 export default function Vehiclesidebar({ children }: { children: ReactNode }) {

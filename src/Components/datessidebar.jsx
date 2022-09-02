@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import {Link as RLink} from "react-router-dom"
 import {
   IconButton,
   Box,
@@ -24,23 +25,20 @@ import {
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
-import {Link as RLink} from "react-router-dom"
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Schedule', icon: FiTrendingUp },
-  { name: 'Locations', icon: FiStar },
-  { name: 'Holidays', icon: FiSettings },
-  { name: 'Taxi', icon: FiTrendingUp },
-  { name: 'Bus', icon: FiTrendingUp },
-  { name: 'Train', icon: FiCompass },
-  { name: 'Fligts', icon: FiCompass },
+  { name: 'Holidays', icon: FiHome },
+  { name: 'Upcoming', icon: FiTrendingUp },
+  { name: 'Family Dates', icon: FiCompass },
+  { name: 'Kids events', icon: FiStar },
+  { name: 'Birthdays', icon: FiSettings },
 ];
 
-export default function Tripsidebar({ children }: { children: ReactNode }) {
+export default function Datessidebar({ children }: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -84,7 +82,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <RLink to="/">
+      <RLink to="/">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           HOME
         </Text>

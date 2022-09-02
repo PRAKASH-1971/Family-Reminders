@@ -31,13 +31,9 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'School Timings', icon: FiTrendingUp },
-  { name: 'Track Bus', icon: FiStar },
-  { name: 'Holidays', icon: FiSettings },
-  { name: 'Courses', icon: FiCompass },
-  { name: 'Contact', icon: FiCompass },
-  { name: 'Kid Progress', icon: FiTrendingUp },
-  { name: 'Evaluations', icon: FiTrendingUp },
+  { name: 'Recharge', icon: FiTrendingUp },
+  { name: 'Entertainment', icon: FiStar },
+  { name: 'Accessories', icon: FiCompass },
 ];
 
 export default function Mobilesidebar({ children }: { children: ReactNode }) {

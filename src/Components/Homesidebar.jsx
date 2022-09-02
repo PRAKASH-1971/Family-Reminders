@@ -31,13 +31,13 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'School Timings', icon: FiTrendingUp },
-  { name: 'Track Bus', icon: FiStar },
-  { name: 'Holidays', icon: FiSettings },
-  { name: 'Courses', icon: FiCompass },
-  { name: 'Contact', icon: FiCompass },
-  { name: 'Kid Progress', icon: FiTrendingUp },
-  { name: 'Evaluations', icon: FiTrendingUp },
+  { name: 'Bills', icon: FiTrendingUp },
+  { name: 'Entertainment', icon: FiStar },
+  { name: 'Rent', icon: FiSettings },
+  { name: 'Tax', icon: FiCompass },
+  { name: 'Blueprint', icon: FiCompass },
+  { name: 'Aplliances', icon: FiTrendingUp },
+  { name: 'Furnitures', icon: FiTrendingUp },
 ];
 
 export default function Homesidebar({ children }: { children: ReactNode }) {
