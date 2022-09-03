@@ -1,5 +1,5 @@
 import { Stack } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 import Dates from "./Dates";
@@ -14,10 +14,15 @@ import Trip from "./Trip";
 import Vehicle from "./Vehicle";
 
 const MainRoutes = () => {
+  const [tab,setTab] = useState(" ")
+
+
+
+
   return (
     <Routes>
       <Route path="/" element={  <Stack direction="row"> 
-        <Sidebar />
+        <Sidebar setTab={setTab}/>
         <Homepage />
         </Stack> } />
       <Route path="/task/:id"

@@ -32,20 +32,19 @@ interface LinkItemProps {
 }
 const LinkItems: Array<LinkItemProps> = [
   { name: 'Checkups', icon: FiTrendingUp },
-  { name: 'Nearest-Hospital', icon: FiStar },
   { name: 'Reports', icon: FiSettings },
   { name: 'COVID-19', icon: FiCompass },
   { name: 'Emergency', icon: FiCompass },
-  { name: 'Monthly-Medications', icon: FiCompass },
 ];
 
-export default function Healthsidebar({ children }: { children: ReactNode }) {
+export default function Healthsidebar({ children ,setTab}: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
+        setTab={setTab}
       />
       <Drawer
         autoFocus={false}
@@ -72,7 +71,7 @@ interface SidebarProps extends BoxProps {
   onClose: () => void;
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({setTab, onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -91,7 +90,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} onClick={()=>setTab(link.name)} >
           {link.name}
         </NavItem>
       ))}

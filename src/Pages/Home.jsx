@@ -25,9 +25,9 @@ const Home = () => {
 
             {tab === "Bills" &&
                 <Flex direction={"column"} width={"fit-content"} m="auto" mt="20px" flexWrap={"wrap"} gap="20px" >
-<Box w="60%" display={"flex"} direction="row" justifyContent={"space-between"}>
+                    <Box w="60%" display={"flex"} direction="row" justifyContent={"space-between"}>
                         <Calendar onChange={onChange} value={value} />
-    <Text fontSize={"2xl"} >Selected Date : <b> {mydate}</b></Text>
+                        <Text fontSize={"2xl"} >Selected Date : <b> {mydate}</b></Text>
                     </Box>
                     <select name="selected" id="selecttag" onChange={handleChange} className="areaCode" style={{ "width": "300px", "height": "35px", "border": "2px solid black", "borderRadius": "10px" }}>
                         <option value={"Electricity"}><b>  Pay Electricity Bill   </b></option>
@@ -48,9 +48,9 @@ const Home = () => {
             }
             {tab === "Entertainment" &&
                 <Flex direction={"column"} width={"fit-content"} m="auto" mt="20px" flexWrap={"wrap"} gap="20px" >
-<Box w="60%" display={"flex"} direction="row" justifyContent={"space-between"}>
+                    <Box w="60%" display={"flex"} direction="row" justifyContent={"space-between"}>
                         <Calendar onChange={onChange} value={value} />
-    <Text fontSize={"2xl"} >Selected Date : <b> {mydate}</b></Text>
+                        <Text fontSize={"2xl"} >Selected Date : <b> {mydate}</b></Text>
                     </Box>
                     <select name="selected" id="selecttag" onChange={handleChangetv} className="areaCode" style={{ "width": "300px", "height": "35px", "border": "2px solid black", "borderRadius": "10px" }}>
                         <option value={"Wifi"}><b>   Pay Wifi Bill </b></option>
@@ -58,13 +58,13 @@ const Home = () => {
                         <option value={"Cabel"}><b>   Pay Cabel TV Bill   </b></option>
                     </select>
 
-                    {tv=== "Wifi" && <iframe style={{ "width": "1200px", "height": "80vh", "overflowY": "scroll" }} src="https://www.billavenue.com/upcomingBillers/Accept-Vasai-Cable-Payments-on-Bharat-Bill-Payment-System-of-BillAvenue.jsp" title="W3Schools Free Online Web Tutorials">
+                    {tv === "Wifi" && <iframe style={{ "width": "1200px", "height": "80vh", "overflowY": "scroll" }} src="https://www.billavenue.com/upcomingBillers/Accept-Vasai-Cable-Payments-on-Bharat-Bill-Payment-System-of-BillAvenue.jsp" title="W3Schools Free Online Web Tutorials">
                     </iframe>}
 
-                    {tv=== "d2h" &&
+                    {tv === "d2h" &&
                         <iframe style={{ "width": "1200px", "height": "80vh", "overflowY": "scroll" }} src="https://getbillsmart.com/dish-bill-pay/" title="W3Schools Free Online Web Tutorials">
                         </iframe>}
-                    {tv=== "Cabel" &&
+                    {tv === "Cabel" &&
                         <iframe style={{ "width": "1200px", "height": "80vh", "overflowY": "scroll" }} src="https://mycabletv.tv/" title="W3Schools Free Online Web Tutorials">
                         </iframe>}
                 </Flex>
@@ -73,25 +73,25 @@ const Home = () => {
                 <Flex direction={"column"} width={"fit-content"} m="auto" mt="20px" flexWrap={"wrap"} gap="20px" >
                     <Box w="60%" display={"flex"} direction="row" justifyContent={"space-between"}>
                         <Calendar onChange={onChange} value={value} />
-    <Text fontSize={"2xl"} >Selected Date : <b> {mydate}</b></Text>
+                        <Text fontSize={"2xl"} >Selected Date : <b> {mydate}</b></Text>
                     </Box>
-                 <iframe style={{ "width": "1200px", "height": "100vh", "overflowY": "scroll" }} src="https://www.nobroker.in/pay-property-rent-online?gclid=Cj0KCQjw08aYBhDlARIsAA_gb0e3nWx6kHd7Oz_KOMPZPa-97nf3JP6afQT1i9TVH0yKwbgRUNT63LQaAl7qEALw_wcB" title="W3Schools Free Online Web Tutorials">
+                    <iframe style={{ "width": "1200px", "height": "100vh", "overflowY": "scroll" }} src="https://www.nobroker.in/pay-property-rent-online?gclid=Cj0KCQjw08aYBhDlARIsAA_gb0e3nWx6kHd7Oz_KOMPZPa-97nf3JP6afQT1i9TVH0yKwbgRUNT63LQaAl7qEALw_wcB" title="W3Schools Free Online Web Tutorials">
                     </iframe>
                 </Flex>
             }
             {tab === "Tax" &&
                 <Flex direction={"column"} width={"fit-content"} m="auto" mt="20px" flexWrap={"wrap"} gap="20px" >
-                 <iframe style={{ "width": "1200px", "height": "100vh", "overflowY": "scroll" }} src="https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp" title="W3Schools Free Online Web Tutorials">
+                    <iframe style={{ "width": "1200px", "height": "100vh", "overflowY": "scroll" }} src="https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp" title="W3Schools Free Online Web Tutorials">
                     </iframe>
                 </Flex>
             }
             {tab === "Groceries" &&
                 <Flex direction={"column"} width={"fit-content"} m="auto" mt="20px" flexWrap={"wrap"} gap="20px" >
-                 <iframe style={{ "width": "1200px", "height": "100vh", "overflowY": "scroll" }} src="https://meghdootmarketing.com/" title="W3Schools Free Online Web Tutorials">
+                    <iframe style={{ "width": "1200px", "height": "100vh", "overflowY": "scroll" }} src="https://meghdootmarketing.com/" title="W3Schools Free Online Web Tutorials">
                     </iframe>
                 </Flex>
             }
-            
+
 
         </Flex>
     )

@@ -3,9 +3,11 @@ import { Box, Flex, Image, Stack ,Text} from "@chakra-ui/react";
 import { AddIcon} from '@chakra-ui/icons'
 import Card from '../Components/Card';
 import {Link as RLink} from "react-router-dom"
+// import Bot from '../Components/Bot';
 
 
 const Homepage = () => {
+  // console.log(tab)
   return (
     <Box w="100%">
 <Flex color={"black"} alignItems={"center"} w="130px" justifyContent={"space-between"} >
@@ -29,6 +31,8 @@ const Homepage = () => {
 <Card ptext={"HEALTH"} IMAGE="https://st2.depositphotos.com/4362315/7819/v/950/depositphotos_78194060-stock-illustration-medical-logo-health-care-center.jpg"/>
 </RLink>
 
+<Text>Below features is on Progress</Text>
+
 
 <RLink to="/Mobile">
 <Card ptext={"MOBILE"} IMAGE="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3dxNUxFPV_RmYQsozpRh1Rvapf6l0i-1DDA&usqp=CAU"/>
@@ -41,6 +45,8 @@ const Homepage = () => {
   <RLink to="/Trip">
   <Card ptext={"TRIP"} IMAGE="https://image.shutterstock.com/image-vector/family-vacation-logo-tshirt-design-260nw-2164586735.jpg"/>
   </RLink>
+
+  {/* <Bot/> */}
 
 
 

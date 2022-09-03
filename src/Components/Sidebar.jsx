@@ -13,6 +13,7 @@ import {
   useDisclosure,
   BoxProps,
   FlexProps,
+  Image,
 } from '@chakra-ui/react';
 import {
   FiHome,
@@ -22,6 +23,7 @@ import {
   FiSettings,
   FiMenu,
 } from 'react-icons/fi';
+import {Link as RLink} from 'react-router-dom'
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 
@@ -30,22 +32,23 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'CREATE', icon: FiHome },
-  { name: 'HOME', icon: FiTrendingUp },
-  { name: 'KIDS', icon: FiCompass },
-  { name: 'HEALTH', icon: FiStar },
-  { name: 'MOBILE', icon: FiSettings },
-  { name: 'VEHICLE', icon: FiSettings },
-  { name: 'TRIPS', icon: FiSettings },
+  { name: 'CREATE', icon: FiHome,url:'/Dates' },
+  { name: 'HOME', icon: FiTrendingUp,url:'/Dates' },
+  { name: 'KIDS', icon: FiCompass,url:'/Dates' },
+  { name: 'HEALTH', icon: FiStar,url:'/Dates' },
+  { name: 'MOBILE', icon: FiSettings,url:'/Dates' },
+  { name: 'VEHICLE', icon: FiSettings,url:'/Dates' },
+  { name: 'TRIPS', icon: FiSettings,url:'/Dates' },
 ];
 
-export default function Sidebar({ children }: { children: ReactNode }) {
+export default function Sidebar({ setTab , children }: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
+        setTab={setTab}
       />
       <Drawer
         autoFocus={false}
@@ -72,7 +75,7 @@ interface SidebarProps extends BoxProps {
   onClose: () => void;
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({ setTab,onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -82,16 +85,16 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       pos="fixed"
       h="full"
       {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          Logo
-        </Text>
+      <Flex h="20" mb="27px" alignItems="center" mx="8" justifyContent="space-between">
+          <Image src="https://i.pinimg.com/originals/d6/f1/8d/d6f18dcdfc48ef9c283fa8e68a5c7a9e.png" m="10px 0px" ></Image>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+       <RLink key={link.name} to={link.url}>
+       <NavItem key={link.name} icon={link.icon} onClick={()=>setTab(link.name)} >
           {link.name}
         </NavItem>
+        </RLink>
       ))}
     </Box>
   );

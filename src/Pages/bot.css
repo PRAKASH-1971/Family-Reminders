@@ -1,0 +1,200 @@
+.bot-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(30, 30, 36, 0.9);
+    z-index: 9;
+}
+
+    .content {
+      width: 70%;
+      height: 85%;
+      background-color: #fff;
+    }
+
+      .left {
+        width: 22%;
+        height: 100%;
+      }
+
+  
+        h1 {
+          color: #fff;
+          font-weight: 400;
+          margin: 30px 0px;
+          font-size: 30px;
+        }
+        hr {
+          width: 70%;
+        }
+        .drop-btns-top {
+          display: none;
+        }
+        .drop-btns{
+          display: none;
+        }
+        .navbtns {
+          width: 100%;
+          margin: 20px 0px;
+        }
+        .navbtns span {
+            padding: 10px 0px;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .icons {
+          width: 100%;
+          height: 40%;
+          margin-top: 10px;
+          font-size: 24px;
+        }
+  
+        .icons a {
+            text-decoration: none;
+        }
+  
+        .icons i {
+              color: #fff;
+              transition: all 0.5s ease-in-out;
+        }
+
+        .icons i:hover {
+                transform: rotate(360deg) scale(1.3);
+              }
+      .right {
+        width: 70%;
+        height: 100%;
+        padding: 20px 50px 0px 0px;
+      }
+  
+      .right i {
+          width: 100%;
+          cursor: pointer;
+          font-size: 20px;
+        }
+
+        .top {
+          width: 100%;
+        }
+
+          .reset {
+            cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.5s ease-in-out;
+            padding: 5px 10px;
+          }
+  
+          .reset:hover {
+              transform: scale(1.2);
+              width: fit-content;
+              border-radius: 7px;
+              color: #fff;
+            }
+
+            i {
+            cursor: pointer;
+            font-size: 20px;
+          }
+  
+        h1 {
+          font-size: 22px;
+          font-weight: 400;
+        }
+  
+          span {
+            font-size: 46px;
+            font-weight: 400;
+          }
+        p {
+          text-indent: 50px;
+          max-width: 90%;
+        }
+  
+        .questions {
+          margin-top: 20px;
+        }
+  
+        .questions h1 {
+            margin-right: 40px;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+  
+          .lists h2 {
+              font-size: 20px;
+              font-weight: 400;
+            }
+
+           .lists  h3 {
+              font-size: 20px;
+              margin-top: 20px;
+              font-weight: 400;
+            }
+            .lists  li {
+              margin-left: 30px;
+            }
+          
+        .note {
+          width: 100%;
+          margin-top: 20px;
+        }
+  
+        .message-container {
+          width: 100%;
+          height: 100%;
+        }
+
+          .box {
+            width: 40%;
+            height: 85%;
+            padding: 10px 10px;
+            border-radius: 10px;
+          }
+  
+            .msg {
+              padding: 10px 10px;
+              width: 100%;
+              height: fit-content;
+            }
+  
+              .voiceIn {
+                width: 100%;
+              }
+  
+              .voiceIn span {
+                  width: fit-content;
+                  color: #fff;
+                  padding: 5px 10px;
+                  margin-top: 10px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: all 0.5s ease-in-out;
+              }
+  
+              .voiceIn span:hover {
+                    transform: scale(1.3);
+                  }
+
+              .voiceOut {
+                color: #fff;
+                padding: 5px 10px;
+                width: fit-content;
+                margin-top: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+              }
+  
+              .voiceOut:hover {
+                  transform: scale(1.3);
+                }
+
+        .reset {
+          margin-top: 0px;
+        }
+  
