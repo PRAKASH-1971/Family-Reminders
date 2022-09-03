@@ -38,6 +38,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Bus', icon: FiTrendingUp },
   { name: 'Train', icon: FiCompass },
   { name: 'Fligts', icon: FiCompass },
+  { name: 'Hotels', icon: FiCompass },
 ];
 
 export default function Tripsidebar({ children }: { children: ReactNode }) {

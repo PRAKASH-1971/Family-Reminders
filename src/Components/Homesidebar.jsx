@@ -34,19 +34,18 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Bills', icon: FiTrendingUp },
   { name: 'Entertainment', icon: FiStar },
   { name: 'Rent', icon: FiSettings },
-  { name: 'Tax', icon: FiCompass },
-  { name: 'Blueprint', icon: FiCompass },
-  { name: 'Aplliances', icon: FiTrendingUp },
-  { name: 'Furnitures', icon: FiTrendingUp },
+  { name: 'Tax', icon: FiCompass }, 
+  { name: 'Groceries', icon: FiTrendingUp },
 ];
 
-export default function Homesidebar({ children }: { children: ReactNode }) {
+export default function Homesidebar({ children,setTab }: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
+        setTab={setTab}
       />
       <Drawer
         autoFocus={false}
@@ -73,7 +72,7 @@ interface SidebarProps extends BoxProps {
   onClose: () => void;
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({setTab, onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -92,7 +91,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} onClick={()=>setTab(link.name)}>
           {link.name}
         </NavItem>
       ))}

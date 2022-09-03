@@ -30,11 +30,13 @@ interface LinkItemProps {
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
-  { name: 'Favourites', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
+  { name: 'CREATE', icon: FiHome },
+  { name: 'HOME', icon: FiTrendingUp },
+  { name: 'KIDS', icon: FiCompass },
+  { name: 'HEALTH', icon: FiStar },
+  { name: 'MOBILE', icon: FiSettings },
+  { name: 'VEHICLE', icon: FiSettings },
+  { name: 'TRIPS', icon: FiSettings },
 ];
 
 export default function Sidebar({ children }: { children: ReactNode }) {

@@ -36,6 +36,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Reports', icon: FiSettings },
   { name: 'COVID-19', icon: FiCompass },
   { name: 'Emergency', icon: FiCompass },
+  { name: 'Monthly-Medications', icon: FiCompass },
 ];
 
 export default function Healthsidebar({ children }: { children: ReactNode }) {

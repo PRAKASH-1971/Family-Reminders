@@ -32,7 +32,6 @@ interface LinkItemProps {
 }
 const LinkItems: Array<LinkItemProps> = [
   { name: 'School Timings', icon: FiTrendingUp },
-  { name: 'Track Bus', icon: FiStar },
   { name: 'Holidays', icon: FiSettings },
   { name: 'Courses', icon: FiCompass },
   { name: 'Contact', icon: FiCompass },
@@ -40,13 +39,14 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Evaluations', icon: FiTrendingUp },
 ];
 
-export default function Kidsidebar({ children }: { children: ReactNode }) {
+export default function Kidsidebar({ children ,setTab}: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
+        setTab={setTab}
       />
       <Drawer
         autoFocus={false}
@@ -73,7 +73,7 @@ interface SidebarProps extends BoxProps {
   onClose: () => void;
 }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({ setTab, onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -92,7 +92,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} onClick={()=>setTab(link.name)}>
           {link.name}
         </NavItem>
       ))}

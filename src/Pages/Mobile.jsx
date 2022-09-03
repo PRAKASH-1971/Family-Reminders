@@ -20,6 +20,7 @@ const Mobile = () => {
         <Flex bg="rgb(247,247,247)"  width={"300px"} borderRadius="50px"   p="10px 0px" alignItems="center"  justifyContent={"space-around"}  >
             <Text fontSize='2xl' fontWeight={"600"} >Help Ticket</Text>
         <AddIcon fontSize='xl' />
+        
         </Flex>
 
 
